@@ -1,0 +1,12 @@
+file_format: "1"
+id: tk44
+name: tk44
+type: board
+arch: arm
+features:
+  - keys
+  - underglow
+outputs:
+  - usb
+  - ble
+url: https://github.com/Ladniy/TK44

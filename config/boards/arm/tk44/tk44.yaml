@@ -1,0 +1,14 @@
+identifier: tk44
+name: tk44
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog
