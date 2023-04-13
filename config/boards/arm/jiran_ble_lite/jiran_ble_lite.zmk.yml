@@ -1,0 +1,11 @@
+file_format: "1"
+id: jiran_ble_lite
+name: Jiran BLE Lite
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+url: https://github.com/ladniy/jiran-ble-lite
