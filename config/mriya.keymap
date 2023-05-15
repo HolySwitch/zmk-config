@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Rafael Yumagulov
+ * Copyright (c) 2023 Andrei Gaevskii
  *
  * SPDX-License-Identifier: MIT
  */
@@ -26,12 +26,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  GUI |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   | GUI/] |
-            //        | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
-            //        | LALT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RALT |
-            //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
-
             bindings = <
             &kp ESC  &kp N1    &kp N2     &kp N3           &kp N4     &kp N5       &kp N6          &kp N7     &kp N8                  &kp N9    &kp N0      &kp MINUS
 &kp LWIN  &kp GRAVE   &kp Q     &kp W      &kp E            &kp R      &kp T        &kp Y           &kp U      &kp I                   &kp O     &kp P       &kp LBKT  &mt RWIN RBKT
@@ -42,12 +36,6 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
-            //       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-            //       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
                 &trans    &trans  &trans     &trans    &trans     &trans       &trans    &trans     &trans    &trans    &trans           &trans
 &trans       &kp UNDER    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6    &kp F7     &kp F8    &kp F9   &kp F10          &kp F11  &mt RGUI F12
@@ -58,12 +46,6 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-            //       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-            //       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-            //                          |     |     | ADJ |   | ADJ |     |     |
-
             bindings = <
                  &trans           &trans     &trans     &trans     &trans        &trans          &trans    &trans     &trans     &trans           &trans           &trans
 &trans       &kp KP_NUM     &kp KP_SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP         &kp SLCK         &kp CAPS  &trans
@@ -74,12 +56,6 @@
         };
 
         adjust_layer {
-            // -----------------------------------------------------------------------------------------
-            // | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
-            //       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-            //       |      |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                          |     |     |     |   |     |     |     |
-
             bindings = <
              &none         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none        &none
 &none  &bootloader         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none  &bootloader  &none
