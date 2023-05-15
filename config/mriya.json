@@ -1,4 +1,6 @@
 {
+  "id": "mriya",
+  "name": "mriya",
   "layouts": {
     "default": {
       "layout": [
@@ -66,5 +68,6 @@
         { "label":  "4,9", "row": 4, "col": 11, "x": 14.23, "y":  4.35, "r":  12, "rx": 14.23, "ry":  5.35 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
