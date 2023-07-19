@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
 #define LWR 1
@@ -41,7 +41,7 @@
        &kp UNDER    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6    &kp F7     &kp F8    &kp F9   &kp F10          &kp F11
   &mt LCTRL PLUS  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
   &mt LALT EQUAL    &kp N1  &kp N2     &kp N3    &kp N4     &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0           &trans
-                            &trans  &lt 3 TAB    &trans     &trans       &trans    &trans  &lt 3 DEL    &trans
+                            &trans  &lt 3 TAB    &tog 4     &trans       &trans    &trans  &lt 3 DEL    &trans
             >;
         };
 
@@ -62,6 +62,16 @@
    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR
    &sys_reset         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none   &sys_reset
                                     &none        &trans         &none        &trans          &trans         &none        &trans         &none
+            >;
+        };
+
+        game_layer {
+            bindings = <
+    &kp ESC  &kp N1    &kp N2    &kp N3     &kp N4       &kp N5    &kp N6  &kp N7     &kp N8   &kp N9    &kp N0  &kp MINUS
+    &kp TAB   &kp Q     &kp W     &kp E      &kp R        &kp T     &kp Y   &kp U      &kp I    &kp O     &kp P   &kp LBKT
+  &kp LSHFT   &kp A     &kp S     &kp D      &kp F        &kp G     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
+  &kp LCTRL   &kp Z     &kp X     &kp C      &kp V        &kp B     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                     &kp LGUI  &kp LALT  &kp SPACE  &lt 1 ENTER    &tog 4  &trans     &trans   &trans
             >;
         };
     };
