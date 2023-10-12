@@ -27,41 +27,41 @@
 
         default_layer {
             bindings = <
-      &kp ESCAPE  &kp N1    &kp N2  &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8         &kp N9    &kp N0      &kp CAPSLOCK
-         &kp TAB   &kp Q     &kp W   &kp E      &kp R      &kp T        &kp Y      &kp U      &kp I          &kp O     &kp P  &kp LEFT_BRACKET
-  &kp LEFT_SHIFT   &kp A     &kp S   &kp D      &kp F      &kp G        &kp H      &kp J      &kp K          &kp L  &kp SEMI  &kp SINGLE_QUOTE
-       &kp LCTRL   &kp Z     &kp X   &kp C      &kp V      &kp B        &kp N      &kp M  &kp COMMA        &kp DOT  &kp FSLH          &kp RALT
-                          &kp LGUI   &sl 1  &kp MINUS  &kp SPACE    &kp ENTER  &kp EQUAL      &sl 2  &kp BACKSPACE
+  &kp ESCAPE      &kp N1  &kp N2    &kp N3  &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9         &kp N0    &kp CAPSLOCK
+  &kp TAB         &kp Q   &kp W     &kp E   &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O          &kp P     &kp LEFT_BRACKET
+  &kp LEFT_SHIFT  &kp A   &kp S     &kp D   &kp F      &kp G        &kp H      &kp J      &kp K      &kp L          &kp SEMI  &kp SINGLE_QUOTE
+  &kp LCTRL       &kp Z   &kp X     &kp C   &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT        &kp FSLH  &kp RALT
+                          &kp LGUI  &sl 1   &kp MINUS  &kp SPACE    &kp ENTER  &kp EQUAL  &sl 2      &kp BACKSPACE
             >;
         };
 
         lower_layer {
             bindings = <
-          &trans            &trans                &trans                 &trans             &trans     &trans       &trans    &trans     &trans     &trans    &trans     &trans
-       &kp UNDER          &kp EXCL                &kp AT               &kp HASH           &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR     &trans    &trans     &trans
-          &trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET     &trans     &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &kp PIPE  &kp GRAVE
-  &mt LALT EQUAL            &trans                &trans                 &trans             &trans     &trans       &trans    &trans     &trans     &trans  &kp BSLH  &kp TILDE
-                                                  &trans                 &trans             &trans      &sl 3       &trans    &trans  &lt 3 DEL     &trans
+  &trans     &trans            &trans                &trans                 &trans             &trans       &trans     &trans    &trans    &trans     &trans    &trans
+  &kp UNDER  &kp EXCL          &kp AT                &kp HASH               &kp DLLR           &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &trans     &trans    &trans
+  &trans     &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans       &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp PIPE  &kp GRAVE
+  &none      &trans            &trans                &trans                 &trans             &trans       &trans     &trans    &trans    &trans     &kp BSLH  &kp TILDE
+                               &trans                &trans                 &trans             &sl 3        &trans     &trans    &none     &trans
             >;
         };
 
         raise_layer {
             bindings = <
-      &trans        &trans          &trans           &trans     &trans        &trans          &trans    &trans     &trans     &trans           &trans           &trans
-  &kp KP_NUM  &kp KP_SLASH       &kp KP_N7        &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP         &kp SLCK         &kp CAPS
-      &trans        &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE     &trans        &trans      &kp C_MUTE  &kp LEFT     &kp UP  &kp RIGHT          &kp INS  &mt RCTRL K_APP
-      &trans     &kp KP_N0       &kp KP_N1        &kp KP_N2  &kp KP_N3    &kp KP_DOT    &kp C_VOL_DN   &kp END   &kp DOWN  &kp PG_DN  &kp PAUSE_BREAK           &trans
-                                    &trans           &trans     &trans     &lt 3 RET       &lt 3 ESC    &trans     &trans     &trans
+  &trans      &trans        &trans          &trans           &trans     &trans          &trans        &trans    &trans     &trans     &trans           &trans
+  &kp KP_NUM  &kp KP_SLASH  &kp KP_N7       &kp KP_N8        &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
+  &trans      &trans        &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans     &trans          &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+  &trans      &kp KP_N0     &kp KP_N1       &kp KP_N2        &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
+                            &trans          &trans           &trans     &lt 3 RET       &lt 3 ESC     &trans    &trans     &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-        &none         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none        &none
-  &bootloader         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none  &bootloader
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR
-   &sys_reset         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none   &sys_reset
-                                    &none        &trans         &none        &trans          &trans         &none        &trans         &none
+  &bt BT_CLR   &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &none
+  &bootloader  &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &bootloader
+  &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none  &none   &none  &none  &bt BT_CLR
+  &sys_reset   &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &sys_reset
+                             &none         &trans        &none         &trans          &trans  &none  &trans  &none
             >;
         };
     };
