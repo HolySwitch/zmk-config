@@ -11,7 +11,8 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define ADJ 3
+#define NUM 3
+#define ADJ 4
 
 &lt {
     quick_tap_ms = <200>;
@@ -22,33 +23,77 @@
 };
 
 / {
+    macros {
+        mv_l_mc: mv_l_mc {
+            label = "move_layer_macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo 3 &kp LSHFT &kp LALT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 3 &kp LSHIFT &kp LALT>
+                ;
+        };
+    };
+
+    macros {
+        all_w: all_w {
+            label = "all_windows";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LGUI &kp UP>
+                ;
+        };
+
+    };
+
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mv_l_mc>, <&all_w>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp LWIN  &kp GRAVE   &kp Q     &kp W      &kp E            &kp R      &kp T        &kp Y           &kp U      &kp I                   &kp O     &kp P       &kp LBKT  &mt RWIN RBKT
-          &kp LCTRL   &kp A     &kp S      &kp D            &kp F      &kp G        &kp H           &kp J      &kp K                   &kp L  &kp SEMI  &mt RCTRL SQT
-           &kp LALT   &kp Z     &kp X      &kp C            &kp V      &kp B        &kp N           &kp M  &kp COMMA                 &kp DOT  &kp FSLH  &mt RALT BSLH
-                             &kp LGUI  &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET    &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI RIGHT_BRACKET
+&kp LWIN   &gresc      &kp Q   &kp W    &kp E      &kp R       &kp T      &kp Y       &kp U       &kp I       &kp O     &kp P      &kp LBKT        &kp BSPC
+           &kp LSHFT   &kp A   &kp S    &kp D      &kp F       &kp G      &kp H       &kp J       &kp K       &kp L     &kp SEMI   &kp SQT
+           &kp TAB     &kp Z   &kp X    &kp C      &kp V       &kp B      &kp N       &kp M       &kp COMMA   &kp DOT   &kp FSLH   &mt RALT BSLH
+                               &td0     &kp LALT   &lt 1 RET   &kp LGUI   &kp LCTRL   &kp SPACE   &mo 2       &mo 3
             >;
         };
 
         lower_layer {
             bindings = <
-&trans       &kp UNDER    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6    &kp F7     &kp F8    &kp F9   &kp F10          &kp F11  &mt RGUI F12
-        &mt LCTRL PLUS  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-        &mt LALT EQUAL    &kp N1  &kp N2     &kp N3    &kp N4     &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0           &trans
-                                  &trans  &lt 3 TAB    &trans     &trans       &trans    &trans  &lt 3 DEL    &trans
+&kp DEL   &gresc       &kp F1     &kp F2   &kp F3     &kp F4     &kp F5      &kp F6      &kp F7      &kp F8     &kp F9     &kp F10    &kp F11           &mt RGUI F12
+          &kp LSHIFT   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp STAR   &kp LPAR   &kp RPAR   &mt RCTRL MINUS
+          &kp TAB      &kp N1     &kp N2   &kp N3     &kp N4     &kp N5      &kp N6      &kp N7      &kp N8     &kp N9     &kp N0     &trans
+                                  &trans   &trans     &trans     &trans      &trans      &lt 4 RET   &trans     &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans       &kp KP_NUM     &kp KP_SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP         &kp SLCK         &kp CAPS  &trans
-        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS      &kp C_MUTE  &kp LEFT     &kp UP  &kp RIGHT          &kp INS  &mt RCTRL K_APP
-                 &trans        &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3    &kp KP_DOT    &kp C_VOL_DN   &kp END   &kp DOWN  &kp PG_DN  &kp PAUSE_BREAK           &trans
-                                             &trans     &trans     &trans     &lt 3 RET       &lt 3 ESC    &trans     &trans     &trans
+&kp DEL   &gresc       &kp C_NEXT   &kp C_BRI_UP   &kp LBRC   &kp EQUAL   &kp RBRC    &kp C_VOL_UP   &kp PG_UP   &trans      &kp HOME    &kp INS           &kp CAPS          &kp BSPC
+          &kp LSHIFT   &kp C_PP     &trans         &kp LPAR   &kp MINUS   &kp RPAR    &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT   &trans            &mt RCTRL K_APP
+          &kp TAB      &kp C_PREV   &kp C_BRI_DN   &kp LBKT   &kp BSLH    &kp RBKT    &kp C_VOL_DN   &kp PG_DN   &kp PSCRN   &kp END     &kp PAUSE_BREAK   &trans
+                                    &trans         &trans     &trans      &trans      &trans         &trans      &trans      &trans
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&kp DEL   &gresc       &trans      &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp T    &kp C_VOL_UP   &kp PG_UP   &trans      &kp HOME    &kp P             &kp CAPS          &kp BSPC
+          &kp LSHIFT   &trans      &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp G    &kp DOWN       &kp LEFT    &kp UP      &kp RIGHT   &trans            &mt RCTRL K_APP
+          &kp TAB      &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp B    &kp C_VOL_DN   &kp PG_DN   &kp PSCRN   &kp END     &kp PAUSE_BREAK   &trans
+                                   &trans      &trans      &trans      &trans   &trans         &trans      &trans      &trans
             >;
         };
 
