@@ -34,9 +34,7 @@
                 , <&macro_release &mo 3 &kp LSHIFT &kp LALT>
                 ;
         };
-    };
 
-    macros {
         all_w: all_w {
             label = "all_windows";
             compatible = "zmk,behavior-macro";
