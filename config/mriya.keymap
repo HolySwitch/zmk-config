@@ -62,7 +62,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mv_l_mc>, <&all_w>;
@@ -77,7 +77,7 @@
 &kp LWIN   &gresc      &kp Q   &kp W   &kp E        &kp R       &kp T      &kp Y       &kp U       &kp I       &kp O     &kp P      &kp LBKT        &kp BSPC
            &kp LSHFT   &kp A   &kp S   &kp D        &kp F       &kp G      &kp H       &kp J       &kp K       &kp L     &kp SEMI   &kp SQT
            &kp TAB     &kp Z   &kp X   &kp C        &kp V       &kp B      &kp N       &kp M       &kp COMMA   &kp DOT   &kp FSLH   &mt RALT BSLH
-                               &hm     &kp LALT   &lt 1 RET   &kp LGUI   &kp LCTRL   &kp SPACE   &mo 2       &mo 3
+                               &hm     &kp LALT     &lt 1 RET   &kp LGUI   &kp LCTRL   &kp SPACE   &mo 2       &mo 3
             >;
         };
 
@@ -93,7 +93,7 @@
         raise_layer {
             bindings = <
 &kp DEL   &gresc       &kp C_NEXT   &kp C_BRI_UP   &kp LBRC   &kp EQUAL   &kp RBRC    &kp C_VOL_UP   &kp PG_UP   &trans      &kp HOME    &kp INS           &kp CAPS          &kp BSPC
-          &kp LSHIFT   &kp C_PP     &trans         &kp LPAR   &kp MINUS   &kp RPAR    &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT   &trans            &mt RCTRL K_APP
+          &kp LSHIFT   &kp C_PP     &trans         &kp LPAR   &kp MINUS   &kp RPAR    &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT   &kp C_MUTE        &mt RCTRL K_APP
           &kp TAB      &kp C_PREV   &kp C_BRI_DN   &kp LBKT   &kp BSLH    &kp RBKT    &kp C_VOL_DN   &kp PG_DN   &kp PSCRN   &kp END     &kp PAUSE_BREAK   &trans
                                     &trans         &trans     &trans      &trans      &trans         &trans      &trans      &trans
             >;
