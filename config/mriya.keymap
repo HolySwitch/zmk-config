@@ -31,7 +31,7 @@
   &kp TAB         &kp Q   &kp W     &kp E   &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O          &kp P     &kp LEFT_BRACKET
   &kp LEFT_SHIFT  &kp A   &kp S     &kp D   &kp F      &kp G        &kp H      &kp J      &kp K      &kp L          &kp SEMI  &kp SINGLE_QUOTE
   &kp LCTRL       &kp Z   &kp X     &kp C   &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT        &kp FSLH  &kp RALT
-                          &kp LGUI  &sl 1   &kp MINUS  &kp SPACE    &kp ENTER  &kp EQUAL  &sl 2      &kp BACKSPACE
+                          &kp LGUI  &mo 1   &kp MINUS  &kp SPACE    &kp ENTER  &kp EQUAL  &sl 2      &kp BACKSPACE
             >;
         };
 
@@ -47,11 +47,11 @@
 
         raise_layer {
             bindings = <
-  &trans      &trans        &trans          &trans           &trans     &trans          &trans        &trans    &trans     &trans     &trans           &trans
-  &kp KP_NUM  &kp KP_SLASH  &kp KP_N7       &kp KP_N8        &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
-  &trans      &trans        &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans     &trans          &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-  &trans      &kp KP_N0     &kp KP_N1       &kp KP_N2        &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                            &trans          &trans           &trans     &lt 3 RET       &lt 3 ESC     &trans    &trans     &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &trans        &trans           &trans     &trans  &trans  &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &trans        &trans           &trans     &trans  &trans  &trans
+  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans    &trans        &kp LG(C)        &kp LG(V)  &trans  &trans  &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &kp C_VOL_DN  &kp C_VOLUME_UP  &trans     &trans  &trans  &trans
+                  &trans          &trans           &trans  &trans    &trans        &trans           &trans     &trans
             >;
         };
 
@@ -59,7 +59,7 @@
             bindings = <
   &bt BT_CLR   &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &none
   &bootloader  &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &bootloader
-  &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none  &none   &none  &none  &bt BT_CLR
+  &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none  &none   &none  &none  &trans
   &sys_reset   &none         &none         &none         &none         &none           &none   &none  &none   &none  &none  &sys_reset
                              &none         &trans        &none         &trans          &trans  &none  &trans  &none
             >;
