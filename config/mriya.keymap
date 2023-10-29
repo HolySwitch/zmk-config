@@ -43,7 +43,31 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
+        };
+        td_minus: td_minus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+
+            tapping-term-ms = <350>;
+        };
+        td_bracket: td_bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_BRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <350>;
+        };
+        td_plus: td_plus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PLUS";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
+
+            tapping-term-ms = <350>;
         };
     };
 
@@ -53,7 +77,7 @@
         default_layer {
             bindings = <
   &kp GRAVE     &kp N1  &kp N2            &kp N3      &kp N4          &kp N5         &kp N6     &kp N7         &kp N8     &kp N9     &kp N0    &kp MINUS
-  &kp TAB       &kp Q   &kp W             &kp E       &kp R           &kp T          &kp Y      &kp U          &kp I      &kp O      &kp P     &mt RBKT LBKT
+  &kp TAB       &kp Q   &kp W             &kp E       &kp R           &kp T          &kp Y      &kp U          &kp I      &kp O      &kp P     &td_bracket
   &kp LCTRL     &kp A   &kp S             &kp D       &kp F           &kp G          &kp H      &kp J          &kp K      &kp L      &kp SEMI  &mt RCTRL SQT
   &kp LEFT_ALT  &kp Z   &kp X             &kp C       &kp V           &kp B          &kp N      &kp M          &kp COMMA  &kp DOT    &kp FSLH  &mt RALT BSLH
                         &kp LEFT_COMMAND  &lt 2 CAPS  &sk LEFT_SHIFT  &lt 1 SPACE    &lt 1 RET  &kp BACKSPACE  &lt 2 DEL  &kp RCTRL
@@ -62,11 +86,11 @@
 
         lower_layer {
             bindings = <
-  &kp F1  &kp F2     &kp F3    &kp F4      &kp F5    &kp F6       &kp F7     &kp F8           &kp F9     &kp F10   &kp F11    &kp F12
-  &trans  &kp EQUAL  &kp PLUS  &kp MINUS   &trans    &trans       &td_brace  &kp RIGHT_BRACE  &kp PIPE   &kp PLUS  &kp EQUAL  &kp RBKT
-  &trans  &kp N1     &kp N2    &kp N3      &kp N4    &kp N5       &kp N6     &kp N7           &kp N8     &kp N9    &kp N0     &trans
-  &trans  &kp EXCL   &kp AT    &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS         &kp STAR   &kp LPAR  &kp RPAR   &trans
-                     &trans    &lt 3 CAPS  &trans    &trans       &trans     &trans           &lt 3 DEL  &trans
+  &kp F1  &kp F2    &kp F3  &kp F4      &kp F5     &kp F6       &kp F7     &kp F8       &kp F9     &kp F10   &kp F11   &kp F12
+  &trans  &trans    &trans  &trans      &td_minus  &td_plus     &td_brace  &td_bracket  &kp PIPE   &trans    &trans    &trans
+  &trans  &kp N1    &kp N2  &kp N3      &kp N4     &kp N5       &kp N6     &kp N7       &kp N8     &kp N9    &kp N0    &trans
+  &trans  &kp EXCL  &kp AT  &kp HASH    &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS     &kp STAR   &kp LPAR  &kp RPAR  &trans
+                    &trans  &lt 3 CAPS  &trans     &trans       &trans     &trans       &lt 3 DEL  &trans
             >;
         };
 
