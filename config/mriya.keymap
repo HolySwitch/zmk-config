@@ -84,11 +84,11 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE       &kp N1  &kp N2     &kp N3            &kp N4            &kp N5         &kp N6     &kp N7             &kp N8     &kp N9     &kp N0    &kp MINUS
-  &kp CAPS        &kp Q   &kp W      &kp E             &kp R             &kp T          &kp Y      &kp U              &kp I      &kp O      &kp P     &td_bracket
-  &kp LEFT_SHIFT  &kp A   &kp S      &kp D             &mt LEFT_SHIFT F  &kp G          &kp H      &mt RIGHT_SHIFT J  &kp K      &kp L      &kp SEMI  &mt RCTRL SQT
-  &kp LEFT_ALT    &kp Z   &kp X      &kp C             &kp V             &kp B          &kp N      &kp M              &kp COMMA  &kp DOT    &kp FSLH  &mt RALT BSLH
-                          &kp LCTRL  &kp LEFT_COMMAND  &lt 2 TAB         &lt 1 SPACE    &lt 1 RET  &lt 2 BACKSPACE    &kp DEL    &kp RCTRL
+  &kp GRAVE       &kp N1  &kp N2    &kp N3     &kp N4            &kp N5         &kp N6     &kp N7             &kp N8     &kp N9     &kp N0    &kp MINUS
+  &kp CAPS        &kp Q   &kp W     &kp E      &kp R             &kp T          &kp Y      &kp U              &kp I      &kp O      &kp P     &td_bracket
+  &kp LEFT_SHIFT  &kp A   &kp S     &kp D      &mt LEFT_SHIFT F  &kp G          &kp H      &mt RIGHT_SHIFT J  &kp K      &kp L      &kp SEMI  &mt RCTRL SQT
+  &kp LEFT_ALT    &kp Z   &kp X     &kp C      &kp V             &kp B          &kp N      &kp M              &kp COMMA  &kp DOT    &kp FSLH  &mt RALT BSLH
+                          &kp LGUI  &kp LCTRL  &lt 2 TAB         &lt 1 SPACE    &lt 1 RET  &lt 2 BACKSPACE    &kp DEL    &kp RCTRL
             >;
         };
 
@@ -97,7 +97,7 @@
   &kp F1     &kp F2    &kp F3  &kp F4    &kp F5     &kp F6       &kp F7     &kp F8           &kp F9    &kp F10   &kp F11   &kp F12
   &trans     &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS         &kp STAR  &kp LPAR  &kp RPAR  &trans
   &kp TILDE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7           &kp N8    &kp N9    &kp N0    &trans
-  &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &td_minus  &td_plus     &td_brace  &td_bracket      &td_pipe  &kp LPAR  &kp RPAR  &trans
+  &kp GRAVE  &trans    &trans  &trans    &td_minus  &td_plus     &td_brace  &td_bracket      &td_pipe  &trans    &trans    &trans
                        &trans  &trans    &lt 3 TAB  &trans       &trans     &lt 3 BACKSPACE  &trans    &trans
             >;
         };
