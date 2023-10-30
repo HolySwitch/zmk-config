@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
 #define LWR 1
@@ -48,11 +47,11 @@
 
         raise_layer {
             bindings = <
-  &trans  &trans  &trans          &trans           &trans  &trans    &trans            &trans           &trans     &trans             &trans  &trans
-  &trans  &trans  &trans          &trans           &trans  &trans    &trans            &trans           &trans     &trans             &trans  &trans
-  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans    &kt LS(RA(LEFT))  &kp LG(C)        &kp LG(V)  &kt LS(LA(RIGHT))  &trans  &trans
-  &trans  &trans  &trans          &trans           &trans  &trans    &kp C_VOL_DN      &kp C_VOLUME_UP  &trans     &trans             &trans  &trans
-                  &trans          &trans           &trans  &trans    &trans            &trans           &trans     &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &trans                  &trans           &trans     &trans                   &trans  &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &trans                  &trans           &trans     &trans                   &trans  &trans
+  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans    &kp LS(LA(LEFT_ARROW))  &kp LG(C)        &kp LG(V)  &kp LS(LA(RIGHT_ARROW))  &trans  &trans
+  &trans  &trans  &trans          &trans           &trans  &trans    &kp C_VOL_DN            &kp C_VOLUME_UP  &trans     &trans                   &trans  &trans
+                  &trans          &trans           &trans  &trans    &trans                  &trans           &trans     &trans
             >;
         };
 
