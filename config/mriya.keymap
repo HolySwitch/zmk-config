@@ -28,6 +28,7 @@
         Escape {
             bindings = <&kp ESC>;
             key-positions = <31 32>;
+            layers = <1 2>;
         };
 
         esc {
@@ -43,14 +44,23 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
+        mt_shift_right: mt_shift_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SHIFT_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <27 13 14 15 16 17 28 29 41 40 39 38 26 25 37 51 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50>;
+            tapping-term-ms = <150>;
+        };
         mt_shift_left: mt_shift_left {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_SHIFT_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <27 13 14 15 16 17 28 29 41 40 39 38 26 25 37 51>;
             tapping-term-ms = <150>;
+            hold-trigger-key-positions = <52 42 30 18 19 20 21 22 23 35 34 33 32 31 43 44 46 45 47 53 54 55 6 7 8 9 10 11 18 19 20 21>;
         };
     };
 
@@ -59,18 +69,18 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE       &kp N1  &kp N2    &kp N3     &kp N4                       &kp N5         &kp N6     &kp N7                        &kp N8     &kp N9     &kp N0    &kp MINUS
-  &kp LEFT_SHIFT  &kp Q   &kp W     &kp E      &kp R                        &kp T          &kp Y      &kp U                         &kp I      &kp O      &kp P     &td_bracket
-  &kp CAPSLOCK    &kp A   &kp S     &kp D      &mt_shift_left LEFT_SHIFT F  &kp G          &kp H      &mt_shift_left RIGHT_SHIFT J  &kp K      &kp L      &kp SEMI  &mt RCTRL SQT
-  &kp LEFT_ALT    &kp Z   &kp X     &kp C      &kp V                        &kp B          &kp N      &kp M                         &kp COMMA  &kp DOT    &kp FSLH  &mt RALT BSLH
-                          &kp LGUI  &kp LCTRL  &lt 2 TAB                    &lt 1 SPACE    &lt 1 RET  &kp BACKSPACE                 &lt 2 DEL  &kp RCTRL
+  &kp GRAVE       &kp N1  &kp N2    &kp N3     &kp N4                       &kp N5         &kp N6     &kp N7                         &kp N8     &kp N9     &kp N0    &kp MINUS
+  &kp LEFT_SHIFT  &kp Q   &kp W     &kp E      &kp R                        &kp T          &kp Y      &kp U                          &kp I      &kp O      &kp P     &td_bracket
+  &kp CAPSLOCK    &kp A   &kp S     &kp D      &mt_shift_left LEFT_SHIFT F  &kp G          &kp H      &mt_shift_right RIGHT_SHIFT J  &kp K      &kp L      &kp SEMI  &mt RCTRL SQT
+  &kp LEFT_ALT    &kp Z   &kp X     &kp C      &kp V                        &kp B          &kp N      &kp M                          &kp COMMA  &kp DOT    &kp FSLH  &mt RALT BSLH
+                          &kp LGUI  &kp LCTRL  &lt 2 TAB                    &lt 1 SPACE    &lt 1 RET  &kp BACKSPACE                  &lt 2 DEL  &kp RCTRL
             >;
         };
 
         lower_layer {
             bindings = <
   &kp F1     &kp F2    &kp F3    &kp F4     &kp F5          &kp F6             &kp F7            &kp F8             &kp F9     &kp F10         &kp F11   &kp F12
-  &trans     &kp EXCL  &kp AT    &kp HASH   &kp DLLR        &kp PRCNT          &kp CARET         &kp AMPS           &kp STAR   &kp LPAR        &kp RPAR  &trans
+  &kp ESC    &kp EXCL  &kp AT    &kp HASH   &kp DLLR        &kp PRCNT          &kp CARET         &kp AMPS           &kp STAR   &kp LPAR        &kp RPAR  &trans
   &kp TILDE  &kp N1    &kp N2    &kp N3     &kp N4          &kp N5             &kp N6            &kp N7             &kp N8     &kp N9          &kp N0    &trans
   &kp GRAVE  &trans    &kp PLUS  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp UNDERSCORE  &kp PIPE  &trans
                        &trans    &trans     &lt 3 TAB       &trans             &trans            &trans             &lt 3 DEL  &trans
