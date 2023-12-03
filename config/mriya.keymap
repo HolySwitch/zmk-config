@@ -67,11 +67,11 @@
 
         dev_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp F8  &trans    &trans  &trans     &trans     &trans     &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &kp F6  &kp F7    &trans  &trans     &trans     &trans     &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans
+        &trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &trans  &kp PG_UP       &kp PG_UP       &trans        &trans           &trans  &trans
+        &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+        &trans  &trans  &trans  &trans   &trans   &trans     &trans  &kp END         &kp PAGE_DOWN   &kp KP_N3     &trans           &trans
+                        &trans  &trans   &trans   &trans     &trans  &trans          &trans          &trans
             >;
         };
     };
