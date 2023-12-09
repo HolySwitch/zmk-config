@@ -62,11 +62,11 @@
 
         raise_layer {
             bindings = <
-        &trans           &trans           &kp KP_NUMLOCK  &trans     &trans     &kp K_CALC      &kt C_BRIGHTNESS_AUTO  &mt C_BRI_MIN C_BRI_MAX  &mt C_BRI_MAX C_BRI_INC  &mt K_MUTE C_MUTE  &kt C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7       &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp INSERT             &kp HOME                 &kp PG_DN                &kp PG_UP          &kp END            &kp CAPS         &trans
-        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4       &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &trans                 &kp LEFT                 &kp DOWN                 &kp UP             &kp RIGHT          &mt RCTRL K_APP
-        &trans           &kp KP_N0        &kp KP_N1       &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp LS(INS)            &kp LC(LEFT)             &kp LC(DOWN)             &kp LC(UP)         &kp LC(RIGHT)      &trans
-                                          &trans          &trans     &trans     &tog 0          &tog 2                 &trans                   &trans                   &trans
+        &kp K_CALC       &trans           &trans     &trans     &trans     &kp PRINTSCREEN    &kt C_BRIGHTNESS_AUTO  &mt C_BRI_MIN C_BRI_MAX  &mt C_BRI_MAX C_BRI_INC  &mt K_MUTE C_MUTE  &kt C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS       &kp INSERT             &kp HOME                 &kp PG_DN                &kp PG_UP          &kp END            &kp CAPS         &trans
+        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS        &kp F1                 &kp LEFT                 &kp DOWN                 &kp UP             &kp RIGHT          &mt RCTRL K_APP
+        &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT         &kp LS(INS)            &kp LC(LEFT)             &kp LC(DOWN)             &kp LC(UP)         &kp LC(RIGHT)      &trans
+                                          &trans     &trans     &trans     &tog 0             &tog 2                 &trans                   &trans                   &trans
             >;
         };
 
