@@ -68,7 +68,7 @@
         };
 
         LAYER4 {
-            bindings = <&sl 4>;
+            bindings = <&sl 0>;
             key-positions = <36 37>;
         };
     };
@@ -136,15 +136,6 @@
   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4      &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
   &sys_reset   &none         &none         &none         &none         &none           &kp C_SLEEP_MODE  &none         &none         &none         &none         &sys_reset
                              &none         &trans        &none         &trans          &trans            &none         &trans        &none
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-  &trans  &trans  &trans                  &kp LS(LC(UP_ARROW))    &trans                   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &kp LS(LC(LEFT_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(RIGHT_ARROW))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans                  &trans                  &trans                   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans                  &trans                  &trans                   &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
