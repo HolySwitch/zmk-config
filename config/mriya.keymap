@@ -68,7 +68,7 @@
         };
 
         LAYER4 {
-            bindings = <&sl 0>;
+            bindings = <&sl 4>;
             key-positions = <6 8>;
         };
 
