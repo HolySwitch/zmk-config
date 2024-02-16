@@ -98,7 +98,34 @@
             label = "SHIFTUP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp E>, <&kp E>, <&kp LS(LC(UP_ARROW))>;
+            bindings = <&kp E>, <&kp LS(LC(UP_ARROW))>;
+        };
+
+        SHIFTDOWN: SHIFTDOWN {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTDOWN";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp LS(LC(DOWN))>;
+
+            tapping-term-ms = <200>;
+        };
+
+        SHIFTLEFT: SHIFTLEFT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTLEFT";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp LS(LC(LEFT))>;
+
+            tapping-term-ms = <200>;
+        };
+
+        SHIFTRIGHT: SHIFTRIGHT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTRIGHT";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp LS(LC(RIGHT))>;
+
+            tapping-term-ms = <200>;
         };
     };
 
@@ -123,10 +150,10 @@
 
         default_layer {
             bindings = <
-  &mt LEFT_WIN RIGHT_BRACKET  &kp Q  &kp W       &SHIFTUP   &kp R           &kp T        &kp Y        &kp U          &kp I      &kp O          &kp P      &kp LBKT
-  &kp LCTRL                   &kp A  &kp S       &kp D      &kp F           &kp G        &kp H        &kp J          &kp K      &kp L          &kp SEMI   &mt RCTRL SQT
-  &kp LALT                    &kp Z  &kp X       &kp C      &kp V           &kp B        &kp N        &kp M          &kp COMMA  &kp DOT        &kp SLASH  &mt RALT MINUS
-                                     &kp ESCAPE  &lt 2 TAB  &kp LEFT_SHIFT  &lt 1 RET    &lt 1 SPACE  &kp BACKSPACE  &lt 2 DEL  &kp BACKSLASH
+  &mt LEFT_WIN RIGHT_BRACKET  &kp Q  &kp W       &SHIFTUP    &kp R           &kp T        &kp Y        &kp U          &kp I      &kp O          &kp P      &kp LBKT
+  &kp LCTRL                   &kp A  &SHIFTLEFT  &SHIFTDOWN  &SHIFTRIGHT     &kp G        &kp H        &kp J          &kp K      &kp L          &kp SEMI   &mt RCTRL SQT
+  &kp LALT                    &kp Z  &kp X       &kp C       &kp V           &kp B        &kp N        &kp M          &kp COMMA  &kp DOT        &kp SLASH  &mt RALT MINUS
+                                     &kp ESCAPE  &lt 2 TAB   &kp LEFT_SHIFT  &lt 1 RET    &lt 1 SPACE  &kp BACKSPACE  &lt 2 DEL  &kp BACKSLASH
             >;
         };
 
