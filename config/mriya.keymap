@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_release>,
                 <&kp RIGHT_ALT &kp RCTRL>,
                 <&macro_tap>,
                 <&kp MINUS>,
