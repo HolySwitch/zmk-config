@@ -114,11 +114,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LC(RIGHT_ALT)>,
+                <&kp RIGHT_ALT &kp RCTRL>,
                 <&macro_tap>,
                 <&kp MINUS>,
                 <&macro_release>,
-                <&kp LC(RIGHT_ALT)>;
+                <&kp RIGHT_ALT &kp RCTRL>;
 
             label = "MINUSG";
         };
