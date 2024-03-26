@@ -38,7 +38,7 @@
         };
 
         minusexcel {
-            bindings = <&kp LC(LA(MINUS))>;
+            bindings = <&kp LC(MINUS)>;
             key-positions = <1 2>;
         };
 
@@ -113,12 +113,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_release>,
-                <&kp RIGHT_ALT &kp RCTRL>,
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_press>,
+                <&kp RCTRL>,
                 <&macro_tap>,
                 <&kp MINUS>,
                 <&macro_release>,
-                <&kp RIGHT_ALT &kp RCTRL>;
+                <&kp RIGHT_ALT &kp RCTRL &kp MINUS>;
 
             label = "MINUSG";
         };
