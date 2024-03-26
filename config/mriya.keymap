@@ -38,7 +38,7 @@
         };
 
         minusexcel {
-            bindings = <&kp LC(MINUS)>;
+            bindings = <&kp LC(LA(MINUS))>;
             key-positions = <1 2>;
         };
 
