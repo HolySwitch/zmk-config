@@ -43,7 +43,7 @@
         };
 
         minusgoogkle {
-            bindings = <&kp LA(LC(RC(RA(MINUS))))>;
+            bindings = <&kp LA(LC(MINUS))>;
             key-positions = <0 1>;
         };
 
