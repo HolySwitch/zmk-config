@@ -43,7 +43,7 @@
         };
 
         minusgoogkle {
-            bindings = <&kp LA(LC(MINUS))>;
+            bindings = <&MinusG>;
             key-positions = <0 1>;
         };
 
@@ -107,6 +107,20 @@
                 <&kp LEFT_ALT>;
 
             label = "LANGSWTICH2";
+        };
+
+        MinusG: MinusG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(RIGHT_ALT)>,
+                <&macro_tap>,
+                <&kp MINUS>,
+                <&macro_release>,
+                <&kp LC(RIGHT_ALT)>;
+
+            label = "MINUSG";
         };
     };
 
