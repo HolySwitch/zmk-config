@@ -75,6 +75,11 @@
             bindings = <&kp LS(TAB)>;
             key-positions = <2 4>;
         };
+
+        mac_lang {
+            bindings = <&ch_lang_mac>;
+            key-positions = <30 31>;
+        };
     };
 
     macros {
@@ -97,6 +102,13 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
             label = "ARROW_RIGHT";
+        };
+
+        ch_lang_mac: ch_lang_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL &kp SPACE &kt LCTRL &tog 1>;
+            label = "CH_LANG_MAC";
         };
     };
 
